@@ -1,0 +1,20 @@
+database:
+  driver: "mysql"
+  dbname: "routes-time-to-visit"
+  username: "root"
+  password: "qwerty3222202884"
+  host: "db"
+  port: "3306"
+  max_lifetime: 7200
+  max_open_conns: 150
+  max_idle_conns: 50
+
+server:
+  port: "3004"
+  secret: "jdnfksdmfksda"
+  #release | debug
+  mode: "release"
+credential:
+  gcbucket: "dasdasd-9053b.appspot.com"
+microservices:
+  auth: http://localhost:3001/verify
