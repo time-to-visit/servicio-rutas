@@ -1,0 +1,1970 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>entry: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">service-routes/cmd/entry/comment.go (9.1%)</option>
+				
+				<option value="file1">service-routes/cmd/entry/resource.go (14.3%)</option>
+				
+				<option value="file2">service-routes/cmd/entry/routes.go (7.7%)</option>
+				
+				<option value="file3">service-routes/cmd/entry/steps.go (7.7%)</option>
+				
+				<option value="file4">service-routes/cmd/handler/comment.go (100.0%)</option>
+				
+				<option value="file5">service-routes/cmd/handler/resource.go (100.0%)</option>
+				
+				<option value="file6">service-routes/cmd/handler/routes.go (100.0%)</option>
+				
+				<option value="file7">service-routes/cmd/handler/steps.go (100.0%)</option>
+				
+				<option value="file8">service-routes/internal/domain/entity/comment.go (60.0%)</option>
+				
+				<option value="file9">service-routes/internal/domain/entity/resource.go (60.0%)</option>
+				
+				<option value="file10">service-routes/internal/domain/entity/routes.go (66.7%)</option>
+				
+				<option value="file11">service-routes/internal/domain/entity/steps.go (66.7%)</option>
+				
+				<option value="file12">service-routes/internal/domain/object_values/response.go (100.0%)</option>
+				
+				<option value="file13">service-routes/internal/domain/repository/comment.go (42.9%)</option>
+				
+				<option value="file14">service-routes/internal/domain/repository/resource.go (42.9%)</option>
+				
+				<option value="file15">service-routes/internal/domain/repository/routes.go (25.0%)</option>
+				
+				<option value="file16">service-routes/internal/domain/repository/steps.go (30.0%)</option>
+				
+				<option value="file17">service-routes/internal/domain/usecase/comment.go (92.3%)</option>
+				
+				<option value="file18">service-routes/internal/domain/usecase/resource.go (100.0%)</option>
+				
+				<option value="file19">service-routes/internal/domain/usecase/routes.go (100.0%)</option>
+				
+				<option value="file20">service-routes/internal/domain/usecase/steps.go (100.0%)</option>
+				
+				<option value="file21">service-routes/internal/domain/utils/sql.go (0.0%)</option>
+				
+				<option value="file22">service-routes/internal/domain/validator/comment.go (66.7%)</option>
+				
+				<option value="file23">service-routes/internal/domain/validator/resource.go (77.8%)</option>
+				
+				<option value="file24">service-routes/internal/domain/validator/routes.go (77.8%)</option>
+				
+				<option value="file25">service-routes/internal/domain/validator/steps.go (77.8%)</option>
+				
+				<option value="file26">service-routes/internal/infra/storage/storage.go (0.0%)</option>
+				
+				<option value="file27">service-routes/internal/infra/validation/client.go (86.7%)</option>
+				
+				<option value="file28">service-routes/internal/utils/decode_file.go (0.0%)</option>
+				
+				<option value="file29">service-routes/internal/utils/random_name.go (0.0%)</option>
+				
+				<option value="file30">service-routes/internal/utils/url_utils.go (50.0%)</option>
+				
+				<option value="file31">service-routes/mocks/ClientRest.go (0.0%)</option>
+				
+				<option value="file32">service-routes/mocks/IGCImageRepo.go (82.6%)</option>
+				
+				<option value="file33">service-routes/mocks/IRepositoryComments.go (81.1%)</option>
+				
+				<option value="file34">service-routes/mocks/IRepositoryResource.go (81.1%)</option>
+				
+				<option value="file35">service-routes/mocks/IRepositoryRoutes.go (80.0%)</option>
+				
+				<option value="file36">service-routes/mocks/IRepositorySteps.go (80.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">no coverage</span>
+				<span class="cov1">low coverage</span>
+				<span class="cov2">*</span>
+				<span class="cov3">*</span>
+				<span class="cov4">*</span>
+				<span class="cov5">*</span>
+				<span class="cov6">*</span>
+				<span class="cov7">*</span>
+				<span class="cov8">*</span>
+				<span class="cov9">*</span>
+				<span class="cov10">high coverage</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package entry
+
+import (
+        "service-routes/internal/domain/entity"
+        "service-routes/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type commentEntry struct {
+        commentCaseuse usecase.CommentsUseCase
+}
+
+func NewCommentEntry(commentCaseuse usecase.CommentsUseCase) *commentEntry <span class="cov8" title="1">{
+        return &amp;commentEntry{
+                commentCaseuse,
+        }
+}</span>
+
+func (r *commentEntry) RegisterComment(context echo.Context) error <span class="cov0" title="0">{
+        comment := context.Get("comment").(*entity.Comments)
+        response, status := r.commentCaseuse.RegisterComment(*comment)
+        return context.JSON(status, response)
+}</span>
+
+func (r *commentEntry) DeleteComment(context echo.Context) error <span class="cov0" title="0">{
+        idComment, _ := strconv.Atoi(context.Param("IDCOMMENT"))
+        idUser, _ := strconv.Atoi(context.Param("IDUSER"))
+        response, status := r.commentCaseuse.DeleteComment(int64(idComment), int64(idUser))
+        return context.JSON(status, response)
+}</span>
+
+func (r *commentEntry) FindComment(context echo.Context) error <span class="cov0" title="0">{
+        idRoute, _ := strconv.Atoi(context.Param("ID"))
+        response, status := r.commentCaseuse.FindComment(int64(idRoute))
+        return context.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package entry
+
+import (
+        "service-routes/internal/domain/entity"
+        "service-routes/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type resourceEntry struct {
+        resourceCaseuse usecase.ResourcesUseCase
+}
+
+func NewResourceEntry(resourceCaseuse usecase.ResourcesUseCase) *resourceEntry <span class="cov8" title="1">{
+        return &amp;resourceEntry{
+                resourceCaseuse,
+        }
+}</span>
+
+func (r *resourceEntry) InsertResource(context echo.Context) error <span class="cov0" title="0">{
+        resource := context.Get("resource").(*entity.Resource)
+        response, status := r.resourceCaseuse.InsertResource(context.Request().Context(), *resource)
+        return context.JSON(status, response)
+}</span>
+
+func (r *resourceEntry) DeleteResource(context echo.Context) error <span class="cov0" title="0">{
+        idResource, _ := strconv.Atoi(context.Param("ID"))
+        response, status := r.resourceCaseuse.DeleteResource(context.Request().Context(), int64(idResource))
+        return context.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package entry
+
+import (
+        "service-routes/internal/domain/entity"
+        "service-routes/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type routeEntry struct {
+        routeCaseuse usecase.RoutesUseCase
+}
+
+func NewRouteEntry(routeCaseuse usecase.RoutesUseCase) *routeEntry <span class="cov8" title="1">{
+        return &amp;routeEntry{
+                routeCaseuse,
+        }
+}</span>
+
+func (r *routeEntry) RegisterRoute(context echo.Context) error <span class="cov0" title="0">{
+        routes := context.Get("routes").(*entity.Routes)
+        response, status := r.routeCaseuse.RegisterRoute(context.Request().Context(), *routes)
+        return context.JSON(status, response)
+}</span>
+
+func (r *routeEntry) DeleteRoute(context echo.Context) error <span class="cov0" title="0">{
+        id, _ := strconv.Atoi(context.Param("ID"))
+        response, status := r.routeCaseuse.DeleteRoute(context.Request().Context(), int64(id))
+        return context.JSON(status, response)
+}</span>
+
+func (r *routeEntry) FindRoute(context echo.Context) error <span class="cov0" title="0">{
+        filter := make(map[string]interface{})
+        response, status := r.routeCaseuse.FindRoute(filter)
+        return context.JSON(status, response)
+}</span>
+
+func (r *routeEntry) FindRouteOne(context echo.Context) error <span class="cov0" title="0">{
+        id, _ := strconv.Atoi(context.Param("ID"))
+        response, status := r.routeCaseuse.FindRouteOne(int64(id))
+        return context.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package entry
+
+import (
+        "service-routes/internal/domain/entity"
+        "service-routes/internal/domain/usecase"
+        "strconv"
+
+        "github.com/labstack/echo/v4"
+)
+
+type stepEntry struct {
+        stepCaseuse usecase.StepsUseCase
+}
+
+func NewStepEntry(stepCaseuse usecase.StepsUseCase) *stepEntry <span class="cov8" title="1">{
+        return &amp;stepEntry{
+                stepCaseuse,
+        }
+}</span>
+
+func (r *stepEntry) InsertStep(context echo.Context) error <span class="cov0" title="0">{
+        step := context.Get("step").(*entity.Steps)
+        response, status := r.stepCaseuse.InsertStep(context.Request().Context(), *step)
+        return context.JSON(status, response)
+}</span>
+
+func (r *stepEntry) FindStep(context echo.Context) error <span class="cov0" title="0">{
+        idRoute, _ := strconv.Atoi(context.Param("ID"))
+        response, status := r.stepCaseuse.FindStep(int64(idRoute))
+        return context.JSON(status, response)
+}</span>
+
+func (r *stepEntry) FindStepOne(context echo.Context) error <span class="cov0" title="0">{
+        idStep, _ := strconv.Atoi(context.Param("ID"))
+        response, status := r.stepCaseuse.FindStepOne(int64(idStep))
+        return context.JSON(status, response)
+}</span>
+
+func (r *stepEntry) DeleteStep(context echo.Context) error <span class="cov0" title="0">{
+        idStep, _ := strconv.Atoi(context.Param("ID"))
+        response, status := r.stepCaseuse.DeleteStep(context.Request().Context(), int64(idStep))
+        return context.JSON(status, response)
+}</span>
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">package handler
+
+import (
+        "service-routes/cmd/entry"
+        "service-routes/internal/domain/usecase"
+        "service-routes/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewCommentEntry(e *echo.Echo, commentUseCase usecase.CommentsUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        commentEntry := entry.NewCommentEntry(commentUseCase)
+        e.POST("/comment", commentEntry.RegisterComment, auth, validator.ValidateComment)
+        e.GET("/comment/:ID", commentEntry.FindComment, auth)
+        e.DELETE("/comment/:IDCOMMENT/:IDUSER", commentEntry.DeleteComment, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package handler
+
+import (
+        "service-routes/cmd/entry"
+        "service-routes/internal/domain/usecase"
+        "service-routes/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewResourceEntry(e *echo.Echo, resourceUseCase usecase.ResourcesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        resourceEntry := entry.NewResourceEntry(resourceUseCase)
+        e.POST("/resource", resourceEntry.InsertResource, auth, validator.ValidateResource)
+        e.DELETE("/resource/:ID", resourceEntry.DeleteResource, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package handler
+
+import (
+        "service-routes/cmd/entry"
+        "service-routes/internal/domain/usecase"
+        "service-routes/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewRoutesEntry(e *echo.Echo, routeUseCase usecase.RoutesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        routeEntry := entry.NewRouteEntry(routeUseCase)
+        e.POST("/route", routeEntry.RegisterRoute, auth, validator.ValidateRoutes)
+        e.DELETE("/route/:ID", routeEntry.DeleteRoute, auth)
+        e.GET("/route", routeEntry.FindRoute, auth)
+        e.GET("/route/:ID", routeEntry.FindRouteOne, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package handler
+
+import (
+        "service-routes/cmd/entry"
+        "service-routes/internal/domain/usecase"
+        "service-routes/internal/domain/validator"
+
+        "github.com/labstack/echo/v4"
+)
+
+func NewStepsEntry(e *echo.Echo, stepUseCase usecase.StepsUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo <span class="cov8" title="1">{
+        stepEntry := entry.NewStepEntry(stepUseCase)
+        e.POST("/step", stepEntry.InsertStep, auth, validator.ValidateSteps)
+        e.DELETE("/step/:ID", stepEntry.DeleteStep, auth)
+        e.GET("/step/route/:ID", stepEntry.FindStep, auth)
+        e.GET("/step/:ID", stepEntry.FindStepOne, auth)
+        return e
+}</span>
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Comments struct {
+        Model
+        Description string                 `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+        Star        string                 `gorm:"column:star;type:varchar(255);not null" json:"star" validate:"required"`
+        IDUser      int64                  `gorm:"column:user_id;type:int(11);not null" json:"user_id" `
+        NameUser    string                 `gorm:"column:name_user;type:varchar(255);not null" json:"name_user"`
+        State       string                 `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        IDRoutes    int64                  `gorm:"column:routes_id;type:int(11);not null" json:"routes_id" validate:"required"`
+        Routes      *RoutesWithoutValidate `gorm:"joinForeignKey:routes_id;foreignKey:id;references:IDRoutes" json:"routes,omitempty"`
+}
+
+func (m Comments) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Comments) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Resource struct {
+        Model
+        UrlResource string                `gorm:"column:url_resource;type:varchar(255);not null" json:"url_resource" validate:"required"`
+        State       string                `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        IDStep      int64                 `gorm:"column:step_id;type:int(11);not null" json:"step_id" valiate:"required" `
+        Steps       *StepsWithoutValidate `gorm:"joinForeignKey:step_id;foreignKey:id;references:IDStep" json:"steps,omitempty"`
+        IDUser      int64                 `gorm:"column:user_id;type:int(11);not null" json:"user_id" valiate:"required" `
+}
+
+func (m Resource) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Resource) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Routes struct {
+        Model
+        MunicipalitiesId   int64  `gorm:"column:municipalities_id;type:int(11);not null" json:"municipalities_id" validate:"required" `
+        MuincipalitiesName string `gorm:"column:municipalities_name;type:varchar(255);not null" json:"municipalities_name" validate:"required"`
+        DepartmentId       int64  `gorm:"column:department_id;type:int(11);not null" json:"department_id" validate:"required" `
+        DepartmentName     string `gorm:"column:department_name;type:varchar(255);not null" json:"department_name" validate:"required"`
+        Description        string `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+        Name               string `gorm:"column:name;type:varchar(255);not null" json:"name" validate:"required"`
+        Cover              string `gorm:"column:cover;type:varchar(255);not null" json:"cover" validate:"required"`
+        State              string `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+}
+
+type RoutesWithoutValidate struct {
+        Model
+        MunicipalitiesId   int64  `gorm:"column:municipalities_id;type:int(11);not null" json:"municipalities_id" `
+        MuincipalitiesName string `gorm:"column:municipalities_name;type:varchar(255);not null" json:"municipalities_name"`
+        DepartmentId       int64  `gorm:"column:department_id;type:int(11);not null" json:"department_id" `
+        DepartmentName     string `gorm:"column:department_name;type:varchar(255);not null" json:"department_name"`
+        Description        string `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+        Name               string `gorm:"column:name;type:varchar(255);not null" json:"name"`
+        Cover              string `gorm:"column:cover;type:varchar(255);not null" json:"cover"`
+        State              string `gorm:"column:state;type:varchar(255);not null" json:"state"`
+}
+
+func (m RoutesWithoutValidate) TableName() string <span class="cov1" title="1">{
+        return "routes"
+}</span>
+
+func (m Routes) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Routes) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file11" style="display: none">package entity
+
+import (
+        "time"
+
+        "gorm.io/gorm"
+)
+
+type Steps struct {
+        Model
+        Name        string  `gorm:"column:name;type:varchar(255);not null" json:"name" validate:"required"`
+        IdSites     int64   `gorm:"column:sites_id;type:int(11);not null" json:"sites_id" valiate:"required" `
+        NameSites   string  `gorm:"column:name_sites;type:varchar(255);not null" json:"name_sites" validate:"required"`
+        Cover       string  `gorm:"column:cover;type:varchar(255);not null" json:"cover" validate:"required"`
+        Direction   string  `gorm:"column:direction;type:varchar(255);not null" json:"direction" validate:"required"`
+        Latitud     string  `gorm:"column:latitud;type:varchar(255);not null" json:"latitud" validate:"required"`
+        Longitud    string  `gorm:"column:longitud;type:varchar(255);not null" json:"longitud" validate:"required"`
+        Description string  `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+        State       string  `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        IDRoutes    int64   `gorm:"column:routes_id;type:int(11);not null" json:"routes_id" valiate:"required" `
+        Routes      *Routes `gorm:"joinForeignKey:routes_id;foreignKey:id;references:IDRoutes" json:"routes,omitempty"`
+}
+
+type StepsWithoutValidate struct {
+        Model
+        Name        string `gorm:"column:name;type:varchar(255);not null" json:"name" validate:"required"`
+        IdSites     int64  `gorm:"column:sites_id;type:int(11);not null" json:"sites_id" valiate:"required" `
+        NameSites   string `gorm:"column:name_sites;type:varchar(255);not null" json:"name_sites" validate:"required"`
+        Cover       string `gorm:"column:cover;type:varchar(255);not null" json:"cover" validate:"required"`
+        Direction   string `gorm:"column:direction;type:varchar(255);not null" json:"direction" validate:"required"`
+        Latitud     string `gorm:"column:latitud;type:varchar(255);not null" json:"latitud" validate:"required"`
+        Longitud    string `gorm:"column:longitud;type:varchar(255);not null" json:"longitud" validate:"required"`
+        Description string `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+        State       string `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
+        IDRoutes    int64  `gorm:"column:routes_id;type:int(11);not null" json:"routes_id" valiate:"required" `
+}
+
+func (m StepsWithoutValidate) TableName() string <span class="cov1" title="1">{
+        return "steps"
+}</span>
+
+func (m Steps) BeforeCreate(tx *gorm.DB) (err error) <span class="cov10" title="2">{
+        m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+
+func (m Steps) BeforeUpdate(tx *gorm.DB) (err error) <span class="cov0" title="0">{
+        m.UpdatedAt = time.Now()
+        return
+}</span>
+</pre>
+		
+		<pre class="file" id="file12" style="display: none">package objectValues
+
+type responseWithData struct {
+        StatusCode int         `json:"status_code"`
+        Title      string      `json:"title"`
+        Message    string      `json:"message"`
+        Data       interface{} `json:"data"`
+}
+
+func NewResponseWithData(StatusCode int, Title string, Message string, Data interface{}) responseWithData <span class="cov10" title="35">{
+        return responseWithData{
+                StatusCode,
+                Title,
+                Message,
+                Data,
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file13" style="display: none">package repository
+
+import (
+        "service-routes/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryComments interface {
+        RegisterComment(comment entity.Comments) (*entity.Comments, error)
+        DeleteComment(idComment int64, idUser int64) error
+        FindComment(idRoute int64) (*[]entity.Comments, error)
+}
+
+func NewRepositoryComments(db *gorm.DB) IRepositoryComments <span class="cov1" title="1">{
+        return &amp;repositoryComments{
+                db,
+        }
+}</span>
+
+type repositoryComments struct {
+        db *gorm.DB
+}
+
+func (r *repositoryComments) RegisterComment(comment entity.Comments) (*entity.Comments, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;comment).Error
+        return &amp;comment, err
+}</span>
+
+func (r *repositoryComments) DeleteComment(idComment int64, idUser int64) error <span class="cov0" title="0">{
+        return r.db.Where("id = ? and user_id = ?", idComment, idUser).Error
+}</span>
+
+func (r *repositoryComments) FindComment(idRoute int64) (*[]entity.Comments, error) <span class="cov0" title="0">{
+        var comments []entity.Comments
+        err := r.db.Where("routes_id = ?", idRoute).Find(&amp;comments).Error
+        return &amp;comments, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file14" style="display: none">package repository
+
+import (
+        "service-routes/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryResource interface {
+        AddResource(resource entity.Resource) (*entity.Resource, error)
+        DelResource(idResource int64) error
+        FindOneResource(idResource int64) (*entity.Resource, error)
+}
+
+func NewRepositoryResource(db *gorm.DB) IRepositoryResource <span class="cov1" title="1">{
+        return &amp;repositoryResource{
+                db,
+        }
+}</span>
+
+type repositoryResource struct {
+        db *gorm.DB
+}
+
+func (r *repositoryResource) AddResource(resource entity.Resource) (*entity.Resource, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;resource).Error
+        return &amp;resource, err
+}</span>
+
+func (r *repositoryResource) FindOneResource(idResource int64) (*entity.Resource, error) <span class="cov0" title="0">{
+        var resource entity.Resource
+        err := r.db.First(&amp;resource, idResource).Error
+        return &amp;resource, err
+}</span>
+
+func (r *repositoryResource) DelResource(idResource int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Resource{}, idResource).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file15" style="display: none">package repository
+
+import (
+        "service-routes/internal/domain/entity"
+        "service-routes/internal/domain/utils"
+
+        "gorm.io/gorm"
+)
+
+type IRepositoryRoutes interface {
+        InsertRoute(routes entity.Routes) (*entity.Routes, error)
+        DelRoute(idRoute int64) error
+        FindRoute(filter map[string]interface{}) (*[]entity.Routes, error)
+        FindRouteOne(idRoute int64) (*entity.Routes, error)
+}
+
+func NewRepositoryRoutes(db *gorm.DB) IRepositoryRoutes <span class="cov1" title="1">{
+        return &amp;repositoryRoutes{
+                db,
+        }
+}</span>
+
+type repositoryRoutes struct {
+        db *gorm.DB
+}
+
+func (r *repositoryRoutes) InsertRoute(routes entity.Routes) (*entity.Routes, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;routes).Error
+        return &amp;routes, err
+}</span>
+func (r *repositoryRoutes) DelRoute(idRoute int64) error <span class="cov0" title="0">{
+        err := r.db.Delete(entity.Routes{}, idRoute).Error
+        return err
+}</span>
+func (r *repositoryRoutes) FindRoute(filter map[string]interface{}) (*[]entity.Routes, error) <span class="cov0" title="0">{
+        var route []entity.Routes
+        command, request := utils.GetWhere(filter)
+        err := r.db.Where(command, request...).Find(&amp;route).Error
+        return &amp;route, err
+}</span>
+func (r *repositoryRoutes) FindRouteOne(idRoute int64) (*entity.Routes, error) <span class="cov0" title="0">{
+        var route entity.Routes
+        err := r.db.First(&amp;route, idRoute).Error
+        return &amp;route, err
+}</span>
+</pre>
+		
+		<pre class="file" id="file16" style="display: none">package repository
+
+import (
+        "service-routes/internal/domain/entity"
+
+        "gorm.io/gorm"
+)
+
+type IRepositorySteps interface {
+        InsertStep(step entity.Steps) (*entity.Steps, error)
+        FindStep(idRoute int64) (*[]entity.Steps, error)
+        FindStepOne(idStep int64) (*entity.Steps, error)
+        DeleteStep(idStep int64) error
+}
+
+func NewRepositorySteps(db *gorm.DB) IRepositorySteps <span class="cov1" title="1">{
+        return &amp;repositorySteps{
+                db,
+        }
+}</span>
+
+type repositorySteps struct {
+        db *gorm.DB
+}
+
+func (r *repositorySteps) InsertStep(step entity.Steps) (*entity.Steps, error) <span class="cov10" title="2">{
+        err := r.db.Create(&amp;step).Error
+        return &amp;step, err
+}</span>
+
+func (r *repositorySteps) FindStep(idRoute int64) (*[]entity.Steps, error) <span class="cov0" title="0">{
+        var steps []entity.Steps
+        err := r.db.Where("id_route = ?", idRoute).Find(&amp;steps).Error
+        return &amp;steps, err
+}</span>
+
+func (r *repositorySteps) FindStepOne(idStep int64) (*entity.Steps, error) <span class="cov0" title="0">{
+        var step entity.Steps
+        err := r.db.First(&amp;step, idStep).Error
+        return &amp;step, err
+}</span>
+
+func (r *repositorySteps) DeleteStep(idStep int64) error <span class="cov0" title="0">{
+        return r.db.Delete(entity.Steps{}, idStep).Error
+}</span>
+</pre>
+		
+		<pre class="file" id="file17" style="display: none">package usecase
+
+import (
+        "net/http"
+        "service-routes/internal/domain/entity"
+        objectValues "service-routes/internal/domain/object_values"
+        "service-routes/internal/domain/repository"
+)
+
+type CommentsUseCase struct {
+        repoComments repository.IRepositoryComments
+}
+
+func NewCommentsUseCase(repoComments repository.IRepositoryComments) CommentsUseCase <span class="cov10" title="6">{
+        return CommentsUseCase{
+                repoComments,
+        }
+}</span>
+
+func (e *CommentsUseCase) RegisterComment(comment entity.Comments) (interface{}, int) <span class="cov4" title="2">{
+        newComment, err := e.repoComments.RegisterComment(comment)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar el comentario", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "comentario insertada exitosamente", newComment), http.StatusOK</span>
+}
+
+func (e *CommentsUseCase) DeleteComment(idComment int64, idUser int64) (interface{}, int) <span class="cov4" title="2">{
+        err := e.repoComments.DeleteComment(idComment, idUser)
+        if err != nil </span><span class="cov4" title="2">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el comentario", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov0" title="0">return objectValues.NewResponseWithData(http.StatusOK, "ok", "coemntario eliminada exitosamente", nil), http.StatusOK</span>
+}
+
+func (e *CommentsUseCase) FindComment(idRoute int64) (interface{}, int) <span class="cov4" title="2">{
+        comments, err := e.repoComments.FindComment(idRoute)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", comments), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file18" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-routes/internal/domain/entity"
+        objectValues "service-routes/internal/domain/object_values"
+        "service-routes/internal/domain/repository"
+        "service-routes/internal/infra/storage"
+        "service-routes/internal/utils"
+)
+
+type ResourcesUseCase struct {
+        repoResources repository.IRepositoryResource
+        file          storage.IGCImageRepo
+}
+
+func NewResourcesUseCase(repoResources repository.IRepositoryResource, file storage.IGCImageRepo) ResourcesUseCase <span class="cov10" title="7">{
+        return ResourcesUseCase{
+                repoResources,
+                file,
+        }
+}</span>
+
+func (r *ResourcesUseCase) InsertResource(ctx context.Context, resource entity.Resource) (interface{}, int) <span class="cov6" title="3">{
+        pathname, err := r.file.SetFile(ctx, resource.UrlResource, "resource-route/resorce-%s.png")
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov4" title="2">resource.UrlResource = pathname
+        newResource, err := r.repoResources.AddResource(resource)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar el recurso", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "recurso insertada exitosamente", newResource), http.StatusOK</span>
+}
+
+func (r *ResourcesUseCase) DeleteResource(ctx context.Context, idResource int64) (interface{}, int) <span class="cov7" title="4">{
+        resource, err := r.repoResources.FindOneResource(idResource)
+        if err != nil || resource == nil || resource.ID == 0 </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "no se encontro el resource", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov6" title="3">objectName := utils.ExtractObjectName(resource.UrlResource)
+        err = r.file.DeleteFile(ctx, "resource-route/%s", objectName)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov4" title="2">err = r.repoResources.DelResource(idResource)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el recurso", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "recurso eliminada exitosamente", nil), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file19" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-routes/internal/domain/entity"
+        objectValues "service-routes/internal/domain/object_values"
+        "service-routes/internal/domain/repository"
+        "service-routes/internal/infra/storage"
+        "service-routes/internal/utils"
+)
+
+type RoutesUseCase struct {
+        repoRoutes repository.IRepositoryRoutes
+        file       storage.IGCImageRepo
+}
+
+func NewRoutesUseCase(repoRoutes repository.IRepositoryRoutes, file storage.IGCImageRepo) RoutesUseCase <span class="cov10" title="11">{
+        return RoutesUseCase{
+                repoRoutes,
+                file,
+        }
+}</span>
+
+func (r *RoutesUseCase) RegisterRoute(ctx context.Context, route entity.Routes) (interface{}, int) <span class="cov5" title="3">{
+        pathname, err := r.file.SetFile(ctx, route.Cover, "route/route-%s.png")
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov3" title="2">route.Cover = pathname
+        newRoute, err := r.repoRoutes.InsertRoute(route)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar la ruta", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "ruta insertada exitosamente", newRoute), http.StatusOK</span>
+}
+
+func (r *RoutesUseCase) DeleteRoute(ctx context.Context, idRoute int64) (interface{}, int) <span class="cov6" title="4">{
+        route, err := r.repoRoutes.FindRouteOne(idRoute)
+        if err != nil || route == nil || route.ID == 0 </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "no se encontro el steps", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov5" title="3">objectName := utils.ExtractObjectName(route.Cover)
+        err = r.file.DeleteFile(ctx, "route/%s", objectName)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov3" title="2">err = r.repoRoutes.DelRoute(idRoute)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar la ruta", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "ruta eliminada exitosamente", nil), http.StatusOK</span>
+}
+
+func (r *RoutesUseCase) FindRoute(filter map[string]interface{}) (interface{}, int) <span class="cov3" title="2">{
+        routes, err := r.repoRoutes.FindRoute(filter)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", routes), http.StatusOK</span>
+}
+
+func (r *RoutesUseCase) FindRouteOne(idRoute int64) (interface{}, int) <span class="cov3" title="2">{
+        route, err := r.repoRoutes.FindRouteOne(idRoute)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", route), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file20" style="display: none">package usecase
+
+import (
+        "context"
+        "net/http"
+        "service-routes/internal/domain/entity"
+        objectValues "service-routes/internal/domain/object_values"
+        "service-routes/internal/domain/repository"
+        "service-routes/internal/infra/storage"
+        "service-routes/internal/utils"
+)
+
+type StepsUseCase struct {
+        repoSteps repository.IRepositorySteps
+        file      storage.IGCImageRepo
+}
+
+func NewStepsUseCase(repoSteps repository.IRepositorySteps, file storage.IGCImageRepo) StepsUseCase <span class="cov10" title="11">{
+        return StepsUseCase{
+                repoSteps,
+                file,
+        }
+}</span>
+
+func (r *StepsUseCase) InsertStep(ctx context.Context, step entity.Steps) (interface{}, int) <span class="cov5" title="3">{
+        pathname, err := r.file.SetFile(ctx, step.Cover, "step/step-%s.png")
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov3" title="2">step.Cover = pathname
+        newStep, err := r.repoSteps.InsertStep(step)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al insertar el paso", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "paso insertada exitosamente", newStep), http.StatusOK</span>
+}
+
+func (r *StepsUseCase) FindStep(idRoute int64) (interface{}, int) <span class="cov3" title="2">{
+        steps, err := r.repoSteps.FindStep(idRoute)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", steps), http.StatusOK</span>
+}
+
+func (r *StepsUseCase) FindStepOne(idStep int64) (interface{}, int) <span class="cov3" title="2">{
+        step, err := r.repoSteps.FindStepOne(idStep)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "problemas al buscar la informacion", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "sucess", step), http.StatusOK</span>
+
+}
+
+func (r *StepsUseCase) DeleteStep(ctx context.Context, idStep int64) (interface{}, int) <span class="cov6" title="4">{
+        step, err := r.repoSteps.FindStepOne(idStep)
+        if err != nil || step == nil || step.ID == 0 </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "no se encontro el steps", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov5" title="3">objectName := utils.ExtractObjectName(step.Cover)
+        err = r.file.DeleteFile(ctx, "step/%s", objectName)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema con storage", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov3" title="2">err = r.repoSteps.DeleteStep(idStep)
+        if err != nil </span><span class="cov1" title="1">{
+                return objectValues.NewResponseWithData(http.StatusBadRequest, "error", "hubo un problema al eliminar el paso", nil), http.StatusBadRequest
+        }</span>
+        <span class="cov1" title="1">return objectValues.NewResponseWithData(http.StatusOK, "ok", "paso eliminada exitosamente", nil), http.StatusOK</span>
+}
+</pre>
+		
+		<pre class="file" id="file21" style="display: none">package utils
+
+func GetWhere(data map[string]interface{}) (string, []interface{}) <span class="cov0" title="0">{
+        var i = 0
+        var command = ""
+        var request []interface{}
+        for index, value := range data </span><span class="cov0" title="0">{
+                command += index + " = ? "
+                if i == 0 </span><span class="cov0" title="0">{
+                        command += " and "
+                }</span>
+                <span class="cov0" title="0">request = append(request, value)</span>
+        }
+        <span class="cov0" title="0">return command, request</span>
+}
+</pre>
+		
+		<pre class="file" id="file22" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-routes/internal/domain/entity"
+        objectValues "service-routes/internal/domain/object_values"
+        validatorPer "service-routes/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateComment(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                comment := new(entity.Comments)
+                auth := c.Get("auth").(objectValues.Auth)
+                _ = c.Bind(&amp;comment)
+                if err := v.Struct(comment); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">comment.NameUser = auth.Data.Nombres
+                comment.IDUser = int64(auth.Data.ID)
+                c.Set("comment", comment)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file23" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-routes/internal/domain/entity"
+        validatorPer "service-routes/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateResource(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                resource := new(entity.Resource)
+
+                _ = c.Bind(&amp;resource)
+                if err := v.Struct(resource); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("resource", resource)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file24" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-routes/internal/domain/entity"
+        validatorPer "service-routes/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateRoutes(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                routes := new(entity.Routes)
+
+                _ = c.Bind(&amp;routes)
+                if err := v.Struct(routes); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("routes", routes)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file25" style="display: none">package validator
+
+import (
+        "net/http"
+        "service-routes/internal/domain/entity"
+        validatorPer "service-routes/internal/infra/validation"
+
+        validatorV "github.com/go-playground/validator/v10"
+        "github.com/labstack/echo/v4"
+)
+
+func ValidateSteps(next echo.HandlerFunc) echo.HandlerFunc <span class="cov8" title="1">{
+        return func(c echo.Context) error </span><span class="cov8" title="1">{
+                v := validatorPer.NewValidator()
+                step := new(entity.Steps)
+
+                _ = c.Bind(&amp;step)
+                if err := v.Struct(step); err != nil </span><span class="cov8" title="1">{
+                        errs := err.(validatorV.ValidationErrors)
+                        return c.JSON(http.StatusBadRequest, validatorPer.GenerateMessage(v, errs))
+                }</span>
+                <span class="cov0" title="0">c.Set("step", step)
+                return next(c)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file26" style="display: none">package storage
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "io"
+        "log"
+        "service-routes/internal/utils"
+
+        "cloud.google.com/go/storage"
+)
+
+type gcImageRepository struct {
+        Storage    *storage.Client
+        BucketName string
+}
+
+type IGCImageRepo interface {
+        SetFile(ctx context.Context, field, routeSprintf string) (string, error)
+        DeleteFile(ctx context.Context, routeSprintf, name string) error
+}
+
+func InitStorage(gcClient *storage.Client, bucketName string) IGCImageRepo <span class="cov0" title="0">{
+        return &amp;gcImageRepository{
+                Storage:    gcClient,
+                BucketName: bucketName,
+        }
+}</span>
+
+func (r *gcImageRepository) SetFile(ctx context.Context, field, routeSprintf string) (string, error) <span class="cov0" title="0">{
+        buf, err := utils.DecodeFile(field)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", errors.New("no es posible decodificar el archivo especificado")
+        }</span>
+        <span class="cov0" title="0">randomName := fmt.Sprintf(routeSprintf, utils.RandomNameObjectUUID())
+
+        bckt := r.Storage.Bucket(r.BucketName)
+        object := bckt.Object(randomName)
+        wc := object.NewWriter(ctx)
+        wc.ObjectAttrs.CacheControl = "Cache-Control:no-cache, max-age=0"
+
+        if _, err := io.Copy(wc, buf); err != nil </span><span class="cov0" title="0">{
+                log.Printf("no se puede escribir el archivo en Google Cloud Storage: %v\n", err)
+                return "", errors.New("no se puede escribir el archivo en Google Cloud Storage")
+        }</span>
+
+        <span class="cov0" title="0">if err := wc.Close(); err != nil </span><span class="cov0" title="0">{
+                fmt.Println(err)
+                return "", errors.New("problemas de acceso al sistema de almacenamiento")
+        }</span>
+
+        <span class="cov0" title="0">imageURL := fmt.Sprintf(
+                "https://storage.googleapis.com/%s/%s",
+                r.BucketName,
+                randomName,
+        )
+
+        return imageURL, nil</span>
+}
+
+func (r *gcImageRepository) DeleteFile(ctx context.Context, routeSprintf, name string) error <span class="cov0" title="0">{
+        bckt := r.Storage.Bucket(r.BucketName)
+        objectName := fmt.Sprintf(routeSprintf, name)
+        object := bckt.Object(objectName)
+
+        if err := object.Delete(ctx); err != nil </span><span class="cov0" title="0">{
+                return errors.New("no fue posible eliminar el archivo con el ID especificado")
+        }</span>
+
+        <span class="cov0" title="0">return nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file27" style="display: none">package validator
+
+import (
+        "log"
+        "strings"
+        "sync"
+
+        "github.com/go-playground/locales/es"
+        ut "github.com/go-playground/universal-translator"
+        "github.com/go-playground/validator/v10"
+        es_translation "github.com/go-playground/validator/v10/translations/es"
+)
+
+var once sync.Once
+
+var validate *validator.Validate
+var trans ut.Translator
+
+func NewValidator() *validator.Validate <span class="cov5" title="4">{
+        once.Do(func() </span><span class="cov1" title="1">{
+                validate = validator.New()
+                es := es.New()
+                uni := ut.New(es, es)
+
+                trans, found := uni.GetTranslator("es")
+                if !found </span><span class="cov0" title="0">{
+                        log.Fatal("Traductor no encontrado")
+                }</span>
+                <span class="cov1" title="1">if err := es_translation.RegisterDefaultTranslations(validate, trans); err != nil </span><span class="cov0" title="0">{
+                        log.Fatal(err)
+                }</span>
+        })
+        <span class="cov5" title="4">return validate</span>
+}
+
+type Error struct {
+        Key     string
+        Message string
+}
+
+func GenerateMessage(v *validator.Validate, errs validator.ValidationErrors) []Error <span class="cov5" title="4">{
+
+        var errors []Error
+
+        for _, e := range errs </span><span class="cov10" title="22">{
+                error := Error{
+                        Key:     strings.Split(e.Translate(trans), " ")[1],
+                        Message: e.Translate((trans)),
+                }
+                errors = append(errors, error)
+        }</span>
+
+        <span class="cov5" title="4">return errors</span>
+
+}
+</pre>
+		
+		<pre class="file" id="file28" style="display: none">package utils
+
+import (
+        "bytes"
+        "encoding/base64"
+        "errors"
+)
+
+func DecodeFile(strBase64 string) (*bytes.Buffer, error) <span class="cov0" title="0">{
+        data, err := base64.StdEncoding.DecodeString(strBase64)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, errors.New("no es posible decodificar el archivo debido a errores existentes")
+        }</span>
+
+        <span class="cov0" title="0">buf := bytes.NewBuffer(data)
+        return buf, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file29" style="display: none">package utils
+
+import (
+        "github.com/google/uuid"
+)
+
+func RandomNameObjectUUID() string <span class="cov0" title="0">{
+        objID, _ := uuid.NewRandom()
+        return objID.String()
+}</span>
+</pre>
+		
+		<pre class="file" id="file30" style="display: none">package utils
+
+import (
+        "net/url"
+        "path"
+        "strings"
+)
+
+func IsURL(content string) bool <span class="cov0" title="0">{
+        _, err := url.ParseRequestURI(content)
+        return err == nil &amp;&amp; strings.HasPrefix(content, "https://")
+}</span>
+
+func ExtractObjectName(fileURL string) string <span class="cov10" title="9">{
+        urlPath, _ := url.ParseRequestURI(fileURL)
+        return path.Base(urlPath.Path)
+}</span>
+</pre>
+		
+		<pre class="file" id="file31" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        rest "github.com/sendgrid/rest"
+        mock "github.com/stretchr/testify/mock"
+)
+
+// ClientRest is an autogenerated mock type for the ClientRest type
+type ClientRest struct {
+        mock.Mock
+}
+
+// Delete provides a mock function with given fields: endpoint, body
+func (_m *ClientRest) Delete(endpoint string, body interface{}) (*rest.Response, error) <span class="cov0" title="0">{
+        ret := _m.Called(endpoint, body)
+
+        var r0 *rest.Response
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string, interface{}) (*rest.Response, error)); ok </span><span class="cov0" title="0">{
+                return rf(endpoint, body)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string, interface{}) *rest.Response); ok </span><span class="cov0" title="0">{
+                r0 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*rest.Response)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string, interface{}) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Get provides a mock function with given fields: endpoint
+func (_m *ClientRest) Get(endpoint string) (*rest.Response, error) <span class="cov0" title="0">{
+        ret := _m.Called(endpoint)
+
+        var r0 *rest.Response
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string) (*rest.Response, error)); ok </span><span class="cov0" title="0">{
+                return rf(endpoint)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string) *rest.Response); ok </span><span class="cov0" title="0">{
+                r0 = rf(endpoint)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*rest.Response)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(endpoint)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Post provides a mock function with given fields: endpoint, body
+func (_m *ClientRest) Post(endpoint string, body interface{}) (*rest.Response, error) <span class="cov0" title="0">{
+        ret := _m.Called(endpoint, body)
+
+        var r0 *rest.Response
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string, interface{}) (*rest.Response, error)); ok </span><span class="cov0" title="0">{
+                return rf(endpoint, body)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string, interface{}) *rest.Response); ok </span><span class="cov0" title="0">{
+                r0 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*rest.Response)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string, interface{}) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+// Put provides a mock function with given fields: endpoint, body
+func (_m *ClientRest) Put(endpoint string, body interface{}) (*rest.Response, error) <span class="cov0" title="0">{
+        ret := _m.Called(endpoint, body)
+
+        var r0 *rest.Response
+        var r1 error
+        if rf, ok := ret.Get(0).(func(string, interface{}) (*rest.Response, error)); ok </span><span class="cov0" title="0">{
+                return rf(endpoint, body)
+        }</span>
+        <span class="cov0" title="0">if rf, ok := ret.Get(0).(func(string, interface{}) *rest.Response); ok </span><span class="cov0" title="0">{
+                r0 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                if ret.Get(0) != nil </span><span class="cov0" title="0">{
+                        r0 = ret.Get(0).(*rest.Response)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if rf, ok := ret.Get(1).(func(string, interface{}) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(endpoint, body)
+        }</span> else<span class="cov0" title="0"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov0" title="0">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewClientRest interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewClientRest creates a new instance of ClientRest. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewClientRest(t mockConstructorTestingTNewClientRest) *ClientRest <span class="cov0" title="0">{
+        mock := &amp;ClientRest{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov0" title="0">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov0" title="0">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file32" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        context "context"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IGCImageRepo is an autogenerated mock type for the IGCImageRepo type
+type IGCImageRepo struct {
+        mock.Mock
+}
+
+// DeleteFile provides a mock function with given fields: ctx, routeSprintf, name
+func (_m *IGCImageRepo) DeleteFile(ctx context.Context, routeSprintf string, name string) error <span class="cov6" title="9">{
+        ret := _m.Called(ctx, routeSprintf, name)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(context.Context, string, string) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(ctx, routeSprintf, name)
+        }</span> else<span class="cov6" title="9"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov6" title="9">return r0</span>
+}
+
+// SetFile provides a mock function with given fields: ctx, field, routeSprintf
+func (_m *IGCImageRepo) SetFile(ctx context.Context, field string, routeSprintf string) (string, error) <span class="cov6" title="9">{
+        ret := _m.Called(ctx, field, routeSprintf)
+
+        var r0 string
+        var r1 error
+        if rf, ok := ret.Get(0).(func(context.Context, string, string) (string, error)); ok </span><span class="cov0" title="0">{
+                return rf(ctx, field, routeSprintf)
+        }</span>
+        <span class="cov6" title="9">if rf, ok := ret.Get(0).(func(context.Context, string, string) string); ok </span><span class="cov0" title="0">{
+                r0 = rf(ctx, field, routeSprintf)
+        }</span> else<span class="cov6" title="9"> {
+                r0 = ret.Get(0).(string)
+        }</span>
+
+        <span class="cov6" title="9">if rf, ok := ret.Get(1).(func(context.Context, string, string) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(ctx, field, routeSprintf)
+        }</span> else<span class="cov6" title="9"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov6" title="9">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIGCImageRepo interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIGCImageRepo creates a new instance of IGCImageRepo. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIGCImageRepo(t mockConstructorTestingTNewIGCImageRepo) *IGCImageRepo <span class="cov10" title="29">{
+        mock := &amp;IGCImageRepo{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="29">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="29">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file33" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-routes/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryComments is an autogenerated mock type for the IRepositoryComments type
+type IRepositoryComments struct {
+        mock.Mock
+}
+
+// DeleteComment provides a mock function with given fields: idComment, idUser
+func (_m *IRepositoryComments) DeleteComment(idComment int64, idUser int64) error <span class="cov4" title="2">{
+        ret := _m.Called(idComment, idUser)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int64, int64) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idComment, idUser)
+        }</span> else<span class="cov4" title="2"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov4" title="2">return r0</span>
+}
+
+// FindComment provides a mock function with given fields: idRoute
+func (_m *IRepositoryComments) FindComment(idRoute int64) (*[]entity.Comments, error) <span class="cov4" title="2">{
+        ret := _m.Called(idRoute)
+
+        var r0 *[]entity.Comments
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int64) (*[]entity.Comments, error)); ok </span><span class="cov0" title="0">{
+                return rf(idRoute)
+        }</span>
+        <span class="cov4" title="2">if rf, ok := ret.Get(0).(func(int64) *[]entity.Comments); ok </span><span class="cov0" title="0">{
+                r0 = rf(idRoute)
+        }</span> else<span class="cov4" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov4" title="2">{
+                        r0 = ret.Get(0).(*[]entity.Comments)
+                }</span>
+        }
+
+        <span class="cov4" title="2">if rf, ok := ret.Get(1).(func(int64) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idRoute)
+        }</span> else<span class="cov4" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov4" title="2">return r0, r1</span>
+}
+
+// RegisterComment provides a mock function with given fields: comment
+func (_m *IRepositoryComments) RegisterComment(comment entity.Comments) (*entity.Comments, error) <span class="cov4" title="2">{
+        ret := _m.Called(comment)
+
+        var r0 *entity.Comments
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Comments) (*entity.Comments, error)); ok </span><span class="cov0" title="0">{
+                return rf(comment)
+        }</span>
+        <span class="cov4" title="2">if rf, ok := ret.Get(0).(func(entity.Comments) *entity.Comments); ok </span><span class="cov0" title="0">{
+                r0 = rf(comment)
+        }</span> else<span class="cov4" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov4" title="2">{
+                        r0 = ret.Get(0).(*entity.Comments)
+                }</span>
+        }
+
+        <span class="cov4" title="2">if rf, ok := ret.Get(1).(func(entity.Comments) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(comment)
+        }</span> else<span class="cov4" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov4" title="2">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryComments interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryComments creates a new instance of IRepositoryComments. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryComments(t mockConstructorTestingTNewIRepositoryComments) *IRepositoryComments <span class="cov10" title="6">{
+        mock := &amp;IRepositoryComments{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="6">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="6">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file34" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-routes/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryResource is an autogenerated mock type for the IRepositoryResource type
+type IRepositoryResource struct {
+        mock.Mock
+}
+
+// AddResource provides a mock function with given fields: resource
+func (_m *IRepositoryResource) AddResource(resource entity.Resource) (*entity.Resource, error) <span class="cov4" title="2">{
+        ret := _m.Called(resource)
+
+        var r0 *entity.Resource
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Resource) (*entity.Resource, error)); ok </span><span class="cov0" title="0">{
+                return rf(resource)
+        }</span>
+        <span class="cov4" title="2">if rf, ok := ret.Get(0).(func(entity.Resource) *entity.Resource); ok </span><span class="cov0" title="0">{
+                r0 = rf(resource)
+        }</span> else<span class="cov4" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov4" title="2">{
+                        r0 = ret.Get(0).(*entity.Resource)
+                }</span>
+        }
+
+        <span class="cov4" title="2">if rf, ok := ret.Get(1).(func(entity.Resource) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(resource)
+        }</span> else<span class="cov4" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov4" title="2">return r0, r1</span>
+}
+
+// DelResource provides a mock function with given fields: idResource
+func (_m *IRepositoryResource) DelResource(idResource int64) error <span class="cov4" title="2">{
+        ret := _m.Called(idResource)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int64) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idResource)
+        }</span> else<span class="cov4" title="2"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov4" title="2">return r0</span>
+}
+
+// FindOneResource provides a mock function with given fields: idResource
+func (_m *IRepositoryResource) FindOneResource(idResource int64) (*entity.Resource, error) <span class="cov7" title="4">{
+        ret := _m.Called(idResource)
+
+        var r0 *entity.Resource
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int64) (*entity.Resource, error)); ok </span><span class="cov0" title="0">{
+                return rf(idResource)
+        }</span>
+        <span class="cov7" title="4">if rf, ok := ret.Get(0).(func(int64) *entity.Resource); ok </span><span class="cov0" title="0">{
+                r0 = rf(idResource)
+        }</span> else<span class="cov7" title="4"> {
+                if ret.Get(0) != nil </span><span class="cov7" title="4">{
+                        r0 = ret.Get(0).(*entity.Resource)
+                }</span>
+        }
+
+        <span class="cov7" title="4">if rf, ok := ret.Get(1).(func(int64) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idResource)
+        }</span> else<span class="cov7" title="4"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov7" title="4">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryResource interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryResource creates a new instance of IRepositoryResource. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryResource(t mockConstructorTestingTNewIRepositoryResource) *IRepositoryResource <span class="cov10" title="7">{
+        mock := &amp;IRepositoryResource{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="7">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="7">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file35" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-routes/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositoryRoutes is an autogenerated mock type for the IRepositoryRoutes type
+type IRepositoryRoutes struct {
+        mock.Mock
+}
+
+// DelRoute provides a mock function with given fields: idRoute
+func (_m *IRepositoryRoutes) DelRoute(idRoute int64) error <span class="cov3" title="2">{
+        ret := _m.Called(idRoute)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int64) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idRoute)
+        }</span> else<span class="cov3" title="2"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov3" title="2">return r0</span>
+}
+
+// FindRoute provides a mock function with given fields: filter
+func (_m *IRepositoryRoutes) FindRoute(filter map[string]interface{}) (*[]entity.Routes, error) <span class="cov3" title="2">{
+        ret := _m.Called(filter)
+
+        var r0 *[]entity.Routes
+        var r1 error
+        if rf, ok := ret.Get(0).(func(map[string]interface{}) (*[]entity.Routes, error)); ok </span><span class="cov0" title="0">{
+                return rf(filter)
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func(map[string]interface{}) *[]entity.Routes); ok </span><span class="cov0" title="0">{
+                r0 = rf(filter)
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*[]entity.Routes)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func(map[string]interface{}) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(filter)
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+// FindRouteOne provides a mock function with given fields: idRoute
+func (_m *IRepositoryRoutes) FindRouteOne(idRoute int64) (*entity.Routes, error) <span class="cov7" title="6">{
+        ret := _m.Called(idRoute)
+
+        var r0 *entity.Routes
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int64) (*entity.Routes, error)); ok </span><span class="cov0" title="0">{
+                return rf(idRoute)
+        }</span>
+        <span class="cov7" title="6">if rf, ok := ret.Get(0).(func(int64) *entity.Routes); ok </span><span class="cov0" title="0">{
+                r0 = rf(idRoute)
+        }</span> else<span class="cov7" title="6"> {
+                if ret.Get(0) != nil </span><span class="cov7" title="6">{
+                        r0 = ret.Get(0).(*entity.Routes)
+                }</span>
+        }
+
+        <span class="cov7" title="6">if rf, ok := ret.Get(1).(func(int64) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idRoute)
+        }</span> else<span class="cov7" title="6"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov7" title="6">return r0, r1</span>
+}
+
+// InsertRoute provides a mock function with given fields: routes
+func (_m *IRepositoryRoutes) InsertRoute(routes entity.Routes) (*entity.Routes, error) <span class="cov3" title="2">{
+        ret := _m.Called(routes)
+
+        var r0 *entity.Routes
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Routes) (*entity.Routes, error)); ok </span><span class="cov0" title="0">{
+                return rf(routes)
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func(entity.Routes) *entity.Routes); ok </span><span class="cov0" title="0">{
+                r0 = rf(routes)
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*entity.Routes)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func(entity.Routes) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(routes)
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositoryRoutes interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositoryRoutes creates a new instance of IRepositoryRoutes. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositoryRoutes(t mockConstructorTestingTNewIRepositoryRoutes) *IRepositoryRoutes <span class="cov10" title="11">{
+        mock := &amp;IRepositoryRoutes{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="11">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="11">return mock</span>
+}
+</pre>
+		
+		<pre class="file" id="file36" style="display: none">// Code generated by mockery v2.27.1. DO NOT EDIT.
+
+package mocks
+
+import (
+        entity "service-routes/internal/domain/entity"
+
+        mock "github.com/stretchr/testify/mock"
+)
+
+// IRepositorySteps is an autogenerated mock type for the IRepositorySteps type
+type IRepositorySteps struct {
+        mock.Mock
+}
+
+// DeleteStep provides a mock function with given fields: idStep
+func (_m *IRepositorySteps) DeleteStep(idStep int64) error <span class="cov3" title="2">{
+        ret := _m.Called(idStep)
+
+        var r0 error
+        if rf, ok := ret.Get(0).(func(int64) error); ok </span><span class="cov0" title="0">{
+                r0 = rf(idStep)
+        }</span> else<span class="cov3" title="2"> {
+                r0 = ret.Error(0)
+        }</span>
+
+        <span class="cov3" title="2">return r0</span>
+}
+
+// FindStep provides a mock function with given fields: idRoute
+func (_m *IRepositorySteps) FindStep(idRoute int64) (*[]entity.Steps, error) <span class="cov3" title="2">{
+        ret := _m.Called(idRoute)
+
+        var r0 *[]entity.Steps
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int64) (*[]entity.Steps, error)); ok </span><span class="cov0" title="0">{
+                return rf(idRoute)
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func(int64) *[]entity.Steps); ok </span><span class="cov0" title="0">{
+                r0 = rf(idRoute)
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*[]entity.Steps)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func(int64) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idRoute)
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+// FindStepOne provides a mock function with given fields: idStep
+func (_m *IRepositorySteps) FindStepOne(idStep int64) (*entity.Steps, error) <span class="cov7" title="6">{
+        ret := _m.Called(idStep)
+
+        var r0 *entity.Steps
+        var r1 error
+        if rf, ok := ret.Get(0).(func(int64) (*entity.Steps, error)); ok </span><span class="cov0" title="0">{
+                return rf(idStep)
+        }</span>
+        <span class="cov7" title="6">if rf, ok := ret.Get(0).(func(int64) *entity.Steps); ok </span><span class="cov0" title="0">{
+                r0 = rf(idStep)
+        }</span> else<span class="cov7" title="6"> {
+                if ret.Get(0) != nil </span><span class="cov7" title="6">{
+                        r0 = ret.Get(0).(*entity.Steps)
+                }</span>
+        }
+
+        <span class="cov7" title="6">if rf, ok := ret.Get(1).(func(int64) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(idStep)
+        }</span> else<span class="cov7" title="6"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov7" title="6">return r0, r1</span>
+}
+
+// InsertStep provides a mock function with given fields: step
+func (_m *IRepositorySteps) InsertStep(step entity.Steps) (*entity.Steps, error) <span class="cov3" title="2">{
+        ret := _m.Called(step)
+
+        var r0 *entity.Steps
+        var r1 error
+        if rf, ok := ret.Get(0).(func(entity.Steps) (*entity.Steps, error)); ok </span><span class="cov0" title="0">{
+                return rf(step)
+        }</span>
+        <span class="cov3" title="2">if rf, ok := ret.Get(0).(func(entity.Steps) *entity.Steps); ok </span><span class="cov0" title="0">{
+                r0 = rf(step)
+        }</span> else<span class="cov3" title="2"> {
+                if ret.Get(0) != nil </span><span class="cov3" title="2">{
+                        r0 = ret.Get(0).(*entity.Steps)
+                }</span>
+        }
+
+        <span class="cov3" title="2">if rf, ok := ret.Get(1).(func(entity.Steps) error); ok </span><span class="cov0" title="0">{
+                r1 = rf(step)
+        }</span> else<span class="cov3" title="2"> {
+                r1 = ret.Error(1)
+        }</span>
+
+        <span class="cov3" title="2">return r0, r1</span>
+}
+
+type mockConstructorTestingTNewIRepositorySteps interface {
+        mock.TestingT
+        Cleanup(func())
+}
+
+// NewIRepositorySteps creates a new instance of IRepositorySteps. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
+func NewIRepositorySteps(t mockConstructorTestingTNewIRepositorySteps) *IRepositorySteps <span class="cov10" title="11">{
+        mock := &amp;IRepositorySteps{}
+        mock.Mock.Test(t)
+
+        t.Cleanup(func() </span><span class="cov10" title="11">{ mock.AssertExpectations(t) }</span>)
+
+        <span class="cov10" title="11">return mock</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

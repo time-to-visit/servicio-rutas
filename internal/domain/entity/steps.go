@@ -15,9 +15,9 @@ type Steps struct {
 	Direction   string  `gorm:"column:direction;type:varchar(255);not null" json:"direction" validate:"required"`
 	Latitud     string  `gorm:"column:latitud;type:varchar(255);not null" json:"latitud" validate:"required"`
 	Longitud    string  `gorm:"column:longitud;type:varchar(255);not null" json:"longitud" validate:"required"`
-	Description string  `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+	Description string  `gorm:"column:description;type:text;size:65535;not null" json:"description" validate:"required"`
 	State       string  `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
-	IDRoutes    int64   `gorm:"column:routes_id;type:int(11);not null" json:"routes_id" valiate:"required" `
+	IDRoutes    int64   `gorm:"column:routes_id;type:int(11);not null" json:"routes_id" validate:"required" `
 	Routes      *Routes `gorm:"joinForeignKey:routes_id;foreignKey:id;references:IDRoutes" json:"routes,omitempty"`
 }
 
@@ -30,7 +30,7 @@ type StepsWithoutValidate struct {
 	Direction   string `gorm:"column:direction;type:varchar(255);not null" json:"direction" validate:"required"`
 	Latitud     string `gorm:"column:latitud;type:varchar(255);not null" json:"latitud" validate:"required"`
 	Longitud    string `gorm:"column:longitud;type:varchar(255);not null" json:"longitud" validate:"required"`
-	Description string `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+	Description string `gorm:"column:description;type:text;size:65535;not null" json:"description" validate:"required"`
 	State       string `gorm:"column:state;type:varchar(255);not null" json:"state" validate:"required"`
 	IDRoutes    int64  `gorm:"column:routes_id;type:int(11);not null" json:"routes_id" valiate:"required" `
 }

@@ -8,7 +8,7 @@ import (
 
 type Comments struct {
 	Model
-	Description string                 `gorm:"column:description;type:varchar(255);not null" json:"description" validate:"required"`
+	Description string                 `gorm:"column:description;type:text;size:65535;not null" json:"description" validate:"required"`
 	Star        string                 `gorm:"column:star;type:varchar(255);not null" json:"star" validate:"required"`
 	IDUser      int64                  `gorm:"column:user_id;type:int(11);not null" json:"user_id" `
 	NameUser    string                 `gorm:"column:name_user;type:varchar(255);not null" json:"name_user"`

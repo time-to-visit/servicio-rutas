@@ -11,6 +11,7 @@ require (
 	cloud.google.com/go/iam v0.5.0 // indirect
 	github.com/AndreasBriese/bbloom v0.0.0-20190825152654-46b345b51c96 // indirect
 	github.com/cespare/xxhash v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dgraph-io/ristretto v0.0.2 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
@@ -38,6 +39,8 @@ require (
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mattn/go-sqlite3 v1.14.12 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/stretchr/objx v0.5.0 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.1 // indirect
 	go.opencensus.io v0.23.0 // indirect
@@ -58,8 +61,10 @@ require (
 
 require (
 	cloud.google.com/go/storage v1.28.0
+	github.com/DATA-DOG/go-sqlmock v1.5.0
 	github.com/dgraph-io/badger v1.6.2
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
+	github.com/go-playground/assert/v2 v2.2.0
 	github.com/go-playground/validator/v10 v10.11.1
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/hashicorp/hcl v1.0.0 // indirect
@@ -73,6 +78,7 @@ require (
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/stretchr/testify v1.8.2
 	github.com/subosito/gotenv v1.4.1 // indirect
 	go.uber.org/zap v1.24.0
 	golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10 // indirect

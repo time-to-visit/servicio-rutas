@@ -35,7 +35,7 @@ func (r *repositoryRoutes) DelRoute(idRoute int64) error {
 func (r *repositoryRoutes) FindRoute(filter map[string]interface{}) (*[]entity.Routes, error) {
 	var route []entity.Routes
 	command, request := utils.GetWhere(filter)
-	err := r.db.Where(command, request...).Find(&route).Error
+	err := r.db.Preload("Steps").Where(command, request...).Find(&route).Error
 	return &route, err
 }
 func (r *repositoryRoutes) FindRouteOne(idRoute int64) (*entity.Routes, error) {

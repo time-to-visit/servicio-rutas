@@ -30,7 +30,7 @@ func (r *repositorySteps) InsertStep(step entity.Steps) (*entity.Steps, error) {
 
 func (r *repositorySteps) FindStep(idRoute int64) (*[]entity.Steps, error) {
 	var steps []entity.Steps
-	err := r.db.Where("id_route = ?", idRoute).Find(&steps).Error
+	err := r.db.Where("routes_id = ?", idRoute).Preload("Routes").Find(&steps).Error
 	return &steps, err
 }
 
