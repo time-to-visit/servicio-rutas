@@ -10,9 +10,9 @@ import (
 
 func NewStepsEntry(e *echo.Echo, stepUseCase usecase.StepsUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	stepEntry := entry.NewStepEntry(stepUseCase)
-	e.POST("/step", stepEntry.InsertStep, auth, validator.ValidateSteps)
-	e.DELETE("/step/:ID", stepEntry.DeleteStep, auth)
-	e.GET("/step/route/:ID", stepEntry.FindStep, auth)
-	e.GET("/step/:ID", stepEntry.FindStepOne, auth)
+	e.POST("/routes/step", stepEntry.InsertStep, auth, validator.ValidateSteps)
+	e.DELETE("/routes/step/:ID", stepEntry.DeleteStep, auth)
+	e.GET("/routes/step/route/:ID", stepEntry.FindStep, auth)
+	e.GET("/routes/step/:ID", stepEntry.FindStepOne, auth)
 	return e
 }

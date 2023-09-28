@@ -10,9 +10,9 @@ import (
 
 func NewRoutesEntry(e *echo.Echo, routeUseCase usecase.RoutesUseCase, auth func(next echo.HandlerFunc) echo.HandlerFunc) *echo.Echo {
 	routeEntry := entry.NewRouteEntry(routeUseCase)
-	e.POST("/route", routeEntry.RegisterRoute, auth, validator.ValidateRoutes)
-	e.DELETE("/route/:ID", routeEntry.DeleteRoute, auth)
-	e.GET("/route", routeEntry.FindRoute, auth)
-	e.GET("/route/:ID", routeEntry.FindRouteOne, auth)
+	e.POST("/routes/route", routeEntry.RegisterRoute, auth, validator.ValidateRoutes)
+	e.DELETE("/routes/route/:ID", routeEntry.DeleteRoute, auth)
+	e.GET("/routes/route", routeEntry.FindRoute, auth)
+	e.GET("/routes/route/:ID", routeEntry.FindRouteOne, auth)
 	return e
 }
